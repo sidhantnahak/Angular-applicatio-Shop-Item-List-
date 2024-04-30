@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(5, 5, 5);
+  padding: 3vmin;
+}
+
+.main-container {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1vmin 2vmin;
+}
+.main-container h2 {
+  text-align: center;
+  padding: 2vmin 0;
+}
+.sub-container {
+  padding: 1vmin 2vmin;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 5vmin;
+}
+.sub-container > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sub-container > :first-child {
+  padding: 2vmin 1vmin;
+  width: 30%;
+  flex-direction: column;
+  background-color: aqua;
+}
+.sub-container > :first-child > form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vmin;
+}
+.sub-container > :first-child > form > input {
+  width: 100%;
+  padding: 1vmin 1.5vmin;
+  border: none;
+  outline: none;
+}
+.sub-container > :last-child {
+  padding: 1vmin 1.5vmin;
+  flex-direction: column;
+  background-color: blueviolet;
+  width: 70%;
+}
+.sub-container > :last-child > span {
+  padding: 0.5vmin 1vmin;
+  width: 100%;
+  font-size: 3vmin;
+  font-weight: 800;
+  border-bottom: 3px solid black;
+  text-align: center;
+}
+.sub-container > :last-child > div {
+  max-height: 75vh;
+  overflow: auto;
+  width: 100%;
+  padding: 2vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 3vmin;
+  scrollbar-width: thin;
+}
+.sub-container > :last-child > div > div {
+  padding: 0.5vmin;
+  height: 80px;
+  font-size: 2.5vmin;
+  width: 150px;
+  border: 2px solid black;
+  word-break: break-all;
+  overflow: auto;
+  position: relative;
+}
+.sub-container > :last-child > div > div>span{
+  padding: 1vmin;
+  font-size: 2vmin;
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  position: relative;
+  bottom: 0.8vmin;
+  right: 0.8vmin;
+  cursor: pointer;
+  text-align: center;
+}
+.sub-container > :last-child > div > div>span>i{
+  transition:color .3s ease-in-out;
+}
+.sub-container > :last-child > div > div>span>i:hover{
+  color: red;
+}
+
+
+@media screen and (max-width: 700px) {
+  .sub-container > :last-child > div > div{
+    height: 50px;
+    width: 100px;
+  }
+  .sub-container {
+    flex-direction: column;
+  }
+  .sub-container > div {
+    width: 100% !important;
+  }
+}
